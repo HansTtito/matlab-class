@@ -30,9 +30,31 @@ set(gca, 'FontWeight', "bold");
 figure
 plot_guardado = plot(trend, error1, "blue", "LineWidth" , 3);
 
-mean(error1)
+mean(error1);
 
 figure
 subplot(2,1,1)
+plot(trend, error1, "blue", "LineWidth" , 2);
+subplot(2,1,2)
+plot(trend, error2, "red", "LineWidth" , 2);
 
 
+mean(error1);
+mean(error2);
+std(error1);
+std(error2);
+std(error1)^2;
+
+figure
+subplot(1,2,1);
+histogram(error1);
+subplot(1,2,2);
+histogram(error2);
+
+
+
+figure
+plot(trend, error1, "red", "LineWidth" , 2, );
+hold on;
+plot(trend, error2,"green");
+legend('Error 1',"Error 2")
