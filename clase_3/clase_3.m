@@ -60,7 +60,21 @@ plot(trend, error2,"green");
 legend('Error 1',"Error 2")
 
 
-%% Texto
+%% Tendencia
 
 
+tendencia = 10 + 0.1*trend;
+
+serie_tiempo = error2 + tendencia;
+
+figure
+subplot(2,2,1)
+plot(trend, error2);
+title("Error");
+subplot(2,2,2)
+plot(trend, tendencia);
+title("Tendencia");
+subplot(2,2,3)
+plot(trend, serie_tiempo);
+title("Serie de Tiempo")
 
