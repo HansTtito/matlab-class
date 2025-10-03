@@ -1,0 +1,159 @@
+---
+title: "Introducción a Git y GitHub"
+subtitle: "Clase práctica"
+author: "Hans Ttito"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    transition: slide
+    incremental: true
+    toc: false
+    revealjs-plugins: [pointer]
+pointer: {}
+---
+
+---
+
+## Bienvenida 👋
+
+- **Objetivo:** Aprender control de versiones con **Git** y colaboración con **GitHub**  
+- **Metas de la clase:**
+  - Entender el flujo de trabajo básico de Git
+  - Conectar repositorio local con GitHub
+  - Practicar ramas, commits y pull requests
+
+---
+
+## ¿Qué es Git?
+
+- **Git** es un **sistema de control de versiones distribuido**
+- Permite:
+  - Guardar el historial de cambios
+  - Colaborar en equipo sin perder trabajo
+  - Volver a versiones anteriores
+- Inventado por **Linus Torvalds** en 2005 para Linux 🐧
+
+---
+
+## ¿Qué es GitHub?
+
+- Plataforma en la nube para **alojar repositorios Git**
+- Beneficios:
+  - Colaboración con otros usuarios
+  - Issues, pull requests, revisiones
+  - Integraciones CI/CD
+- Competidores: GitLab, Bitbucket, Azure DevOps
+
+---
+
+## Flujo de trabajo en Git ⚙️
+
+```text
+Working Directory → Staging Area → Repository (local) → Remote (GitHub)
+````
+
+* **Working Directory:** tu carpeta actual
+* **Staging Area:** archivos listos para guardar
+* **Repository:** historial local
+* **Remote:** copia en la nube (GitHub)
+
+---
+
+## Instalación y Configuración ⚡
+
+```bash
+git --version
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
+git config --list
+```
+
+✅ Requiere:
+
+* Instalar [Git](https://git-scm.com/)
+* Tener cuenta en [GitHub](https://github.com/)
+
+---
+
+## Primer Repositorio 🚀
+
+### Crear un repo local
+
+```bash
+mkdir mi-proyecto
+cd mi-proyecto
+git init
+```
+
+### Agregar archivos
+
+```bash
+git add archivo.txt
+git commit -m "Primer commit"
+git status
+```
+
+---
+
+## Conectando con GitHub 🌐
+
+1. Crear repo en GitHub (sin README)
+2. Conectar remoto:
+
+```bash
+git remote add origin https://github.com/usuario/mi-proyecto.git
+git branch -M main
+git push -u origin main
+```
+
+3. Clonar un repo existente:
+
+```bash
+git clone URL
+```
+
+---
+
+## Comandos Esenciales 📝
+
+| Acción                | Comando                 |
+| --------------------- | ----------------------- |
+| Ver historial         | `git log`               |
+| Ver cambios           | `git diff`              |
+| Cambiar rama          | `git checkout rama`     |
+| Crear nueva rama      | `git checkout -b nueva` |
+| Combinar ramas        | `git merge rama`        |
+| Traer cambios remotos | `git pull origin main`  |
+| Subir cambios remotos | `git push origin main`  |
+
+---
+
+## Ejercicio Práctico 🏗️
+
+> **Reto:**
+
+1. Crear un repositorio local con README
+2. Subirlo a GitHub
+3. Crear una rama `feature`
+4. Editar el README y hacer commit
+5. Fusionar la rama en `main` con `merge`
+6. Crear un **Pull Request** en GitHub
+
+---
+
+## Buenas Prácticas 💡
+
+* Hacer commits pequeños y con mensajes claros
+* Usar `.gitignore` para excluir archivos innecesarios
+* Mantener ramas organizadas
+* Siempre **pull antes de push**
+
+---
+
+## Recursos Útiles 📚
+
+* [Git Docs](https://git-scm.com/doc)
+* [GitHub Docs](https://docs.github.com/)
+* [Cheat Sheet PDF](https://education.github.com/git-cheat-sheet-education.pdf)
+
